@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio | Mahasiswa Teknik Informatika</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.motto{
+    max-width:700px;
+    margin:20px auto 30px;
+    font-size:1.2rem;
+    font-style:italic;
+    font-weight:500;
+    color:#fbbf24;
+    letter-spacing:1px;
+    line-height:1.8;
+    position:relative;
+    text-align:center;
+    text-shadow:0 0 15px rgba(251,191,36,.4);
+}
+
+.motto::before,
+.motto::after{
+    content:"";
+    display:inline-block;
+    width:60px;
+    height:2px;
+    background:#38bdf8;
+    vertical-align:middle;
+    margin:0 15px;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    color:white;
+    background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+    url('omo hada.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(10px);
+}
+
+nav{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero img{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 30px rgba(56,189,248,.5);
+    margin-bottom:20px;
+}
+
+.tag{
+    color:#38bdf8;
+    letter-spacing:3px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero p{
+    color:#e2e8f0;
+    margin-bottom:25px;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#38bdf8;
+    color:#0f172a;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.card{
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.section-title{
+    color:#38bdf8;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.about{
+    text-align:center;
+    color:#e2e8f0;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:10px 20px;
+    border-radius:30px;
+    border:1px solid #38bdf8;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+}
+
+.project h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.5);
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">ONO NIHA</div>
+
+        <ul>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#project">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <img src="url(foto.jpg/6db9911a639118b6e172ad8a4b3d5430.jpg)" alt="Foto Saya">
+
+        <div class="tag">MAHASISWA TEKNIK INFORMATIKA</div>
+
+        <h1>Halo, Saya <span>Nama Anda</span></h1>
+
+        <p>
+            Mahasiswa Teknik Informatika yang memiliki minat pada
+            Web Development, Pemrograman, dan Teknologi Digital.
+            Membawa semangat Ono Niha untuk terus belajar,
+            berkembang, dan berkarya.
+        </p>
+
+        <a href="#about" class="btn">Lihat Profil</a>
+
+    </div>
+
+</section>
+
+<section class="section" id="about">
+
+    <div class="card">
+        <h2 class="section-title">Tentang Saya</h2>
+
+        <p class="about">
+            Saya adalah mahasiswa Teknik Informatika yang sedang
+            mempelajari pengembangan website, database, dan
+            pemrograman. Saya senang belajar teknologi baru dan
+            mengembangkan kemampuan melalui proyek pribadi maupun tugas kuliah.
+        </p>
+    </div>
+
+</section>
+
+<section class="section" id="skills">
+
+    <div class="card">
+
+        <h2 class="section-title">Skill</h2>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">PHP</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">GitHub</div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="project">
+
+    <div class="card">
+
+        <h2 class="section-title">Proyek Saya</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Website Portofolio</h3>
+                <p>
+                    Website pribadi untuk menampilkan profil,
+                    kemampuan, dan pengalaman belajar.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Sistem Data Mahasiswa</h3>
+                <p>
+                    Aplikasi sederhana untuk mengelola data mahasiswa
+                    menggunakan PHP dan MySQL.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Website Informasi Kampus</h3>
+                <p>
+                    Website informasi sederhana yang dibuat sebagai
+                    latihan pengembangan web.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    margin:15px 0;
+    padding:15px 20px;
+
+    text-decoration:none;
+    color:white;
+
+    background:#1e293b;
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+.contact-item:hover{
+    transform:translateX(8px);
+
+    background:linear-gradient(
+        135deg,
+        #38bdf8,
+        #0ea5e9
+    );
+
+    color:#0f172a;
+}
+
+.contact-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin:15px 0;
+    padding:15px 20px;
+
+    text-decoration:none;
+    color:white;
+
+    background:#1e293b;
+    border-radius:15px;
+
+    transition:.3s;
+}
+
+.contact-item:hover{
+    transform:translateX(8px);
+
+    background:linear-gradient(
+        135deg,
+        #38bdf8,
+        #0ea5e9
+    );
+
+    color:#0f172a;
+}
+
+.contact-item span{
+    font-size:1rem;
+    font-weight:600;
+}
+
+.contact-item i{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#0f172a;
+    color:#fbbf24;
+
+    font-size:1.2rem;
+}
